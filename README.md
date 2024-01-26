@@ -25,3 +25,7 @@
 ## 3. Pig game
 
 **Игра "Свинья"**
+
+* Работа с DOM элементами
+  * Поиск элемента по ID `getElementById('elementId')`
+  * Переключение класса (удаляет если класс есть, добавляет если класса нет) `element.classList.toggle('className')`
