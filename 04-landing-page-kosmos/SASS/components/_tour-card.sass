@@ -1,0 +1,100 @@
+.tour-card
+  position: reletive
+  height: 50rem
+  perspective: 150rem
+  -moz-perspective: 150rem
+
+  &__side
+    position: absolute
+    top: 0
+    left: 0
+    height: 50rem
+    width: 100%
+    border-radius: .5rem
+    overflow: hidden
+    transition: all 1s ease-out
+    color: #eee
+    box-shadow: $box-shadow
+    backface-visibility: hidden
+
+    &_front
+      background: #eee
+
+    &_back
+      background: linear-gradient(180deg, $color-blue-dark, $color-blue-light)
+      transform: rotateY(180deg)
+
+  &:hover &__side_front
+    transform: rotateY(-180deg)
+
+  &:hover &__side_back
+    transform: rotateY(0deg)
+
+  &__img
+    margin-bottom: 6rem
+    height: 21rem
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%)
+
+    &_first
+      background: url(../img/tour-page3.jpg) center / cover no-repeat
+    &_second
+      background: url(../img/tour-page2.jpg) center / cover no-repeat
+    &_third
+      background: url(../img/tour-page1.jpg) center / cover no-repeat
+
+  &__title
+    position: absolute
+    top: 16rem
+    right: 0
+    font-size: 2.8rem
+    letter-spacing: .2rem
+    font-weight: 300
+    text-transform: uppercase
+    text-align: right
+
+  &__description
+    ul
+      margin: 0 auto
+      width: 75%
+      list-style: none
+      text-align: center
+      li
+        display: inline-block
+        font-size: 1.6rem
+        letter-spacing: .2rem
+        border-bottom: .1rem solid $color-gray
+        color: $color-gray
+        &:not(:last-child)
+          margin-bottom: 2rem
+
+  &__span
+    padding: 1rem 2rem
+    background: linear-gradient(90deg, rgb(43, 108, 151), rgb(87, 52, 52))
+    &_1
+
+    &_2
+      position: absolute
+      top: 4rem
+      right: 0
+
+  &__back-wrapper
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  &__price-description
+    margin-bottom: 8rem
+    font-size: 1.6rem
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: 300
+    text-align: center
+
+  &__price
+    margin-bottom: 8rem
+    font-size: 6rem
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: 500
+    text-align: center

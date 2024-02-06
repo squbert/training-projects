@@ -1,0 +1,49 @@
+.reviews-card
+  margin: 0 auto
+  margin-bottom: $margin-vertical-big
+  padding: 6rem
+  width: 85%
+  background: rgba($color-white, .75)
+  box-shadow: $box-shadow
+  transform: skewX(-12deg)
+  & > *
+    transform: skewX(12deg)
+
+  &__avatar
+    position: relative
+    margin-right: 4rem
+    width: 15rem
+    height: 15rem
+    background: $color-gray
+    float: left
+    border-radius: 50%
+    overflow: hidden
+    shape-outside: circle(50% at 50% 50%)
+    -webkit-shape-outside: circle(50% at 50% 50%)
+
+  &__image
+    height: 100%
+    width: 100%
+    transform: scale(1)
+    transition: all .5s
+
+  &__user-name
+    position: absolute
+    top: 50%
+    left: 50%
+    text-align: center
+    font-size: 2rem
+    letter-spacing: .2rem
+    font-weight: 400
+    color: $color-white
+    transform: translate(-50%, -20%)
+    transition: all .5s
+    opacity: 0
+
+  &:hover &__image
+    transform: scale(1.4)
+    filter: blur(.3rem) brightness(50%)
+
+  &:hover &__user-name
+    transform: translate(-50%, -50%)
+    opacity: 1

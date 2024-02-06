@@ -1,0 +1,26 @@
+*, ::after, ::before
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  // font-size: 10px
+  /* Расчет 10px в процентах:
+    Чтобы получить 10px в процентах, нужно их разделить на 16,
+    т.к. 16px стоит по умолчанию у тега html и умножить на 100
+    (10 / 16) * 100 = 62.5%
+    */
+  font-size: 62.5%
+
+body
+  padding: 5rem
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 1.6rem
+  letter-spacing: .2rem
+  color: $color-gray
+  background-color: $color-white
+
+.container
+  position: relative
+  background: linear-gradient(90deg, rgba(43, 108, 151, .2), rgba(87, 52, 52, .2))
