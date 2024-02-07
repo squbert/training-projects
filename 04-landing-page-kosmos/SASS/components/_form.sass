@@ -5,15 +5,19 @@
   background: linear-gradient(110deg, rgba(250, 250, 250, 1) 0%, rgba(230, 230, 230, 1) 55%, rgba(94,145,246,.8) 60%, rgba(6,12,123,.5) 100%), url(../img/form.jpg)  right/60% 100% no-repeat
 
 .form
-  width: 65%
+  width: 70%
   padding-top: 5rem
   padding-left: 5rem
 
   &__wrapper:not(:last-child)
     margin-bottom: 2rem
+    @include respond(tab-land)
+      margin-bottom: 1rem
 
   &__wrapper:nth-child(4)
     margin-bottom: 4rem
+    @include respond(tab-land)
+      margin-bottom: 2rem
     
   &__title
     text-align: left
@@ -33,6 +37,8 @@
     color: $color-black
     background: $color-white
     box-shadow: $box-shadow
+    @include respond(tab-land)
+    width: 70%
     &:focus
       border-bottom: .5rem solid #66D763
       outline: none
@@ -55,7 +61,12 @@
 
   &__wrapper-radio
     display: inline-block
-    width: 40%
+    &:not(:last-child)
+      margin-right: 2rem
+    @include respond(tab-land)
+      display: block
+      margin-bottom: 1.7rem
+      
 
   &__input-radio
     display: none

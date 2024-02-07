@@ -15,6 +15,9 @@
     animation-delay: .3s
     animation-fill-mode: backwards
     backface-visibility: hidden
+    @include respond(tab-land)
+      font-size: 4rem
+      
 
   &__secondary
     display: block
@@ -29,6 +32,8 @@
     animation-timing-function: ease
     animation-fill-mode: backwards
     backface-visibility: hidden
+    @include respond(tab-land)
+      font-size: 3rem
 
 .title-secondary
   font-size: 3.6rem
@@ -46,16 +51,21 @@
     text-shadow: $title-shadow
   &_white
     color: $color-white
+  @include respond(tab-land)
+      font-size: 3rem
 
 .title-third
   font-size: 2rem
   letter-spacing: .2rem
   text-transform: uppercase
   font-weight: 700
-  
+  @include respond(tab-land)
+      font-size: 1.8rem
 
 .paragraph
   font-size: 1.6rem
   letter-spacing: .2rem
   line-height: 140%
   font-weight: 400
+  @include respond(tab-land)
+      font-size: 1.5rem

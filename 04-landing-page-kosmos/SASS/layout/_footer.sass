@@ -17,7 +17,10 @@
       display: inline-block
       cursor: pointer
       &:not(:last-child)
-        margin-right: 5rem
+        margin-right: 3rem
+      @include respond(tab-land)
+        &:not(:last-child)
+          margin-right: 2rem
 
   &__link
     &:link, &:visited
@@ -26,6 +29,8 @@
       font-weight: 300
       color: $color-white
       transition: all .3s
+      @include respond(tab-land)
+        font-size: 1.5rem
     &:hover
         color: $color-blue-light
         transform: skewY(5deg) scale(1.2)

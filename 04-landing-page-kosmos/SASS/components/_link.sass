@@ -9,6 +9,9 @@
     background: $color-white
     transition: all .3s
     backface-visibility: hidden
+    @include respond(tab-land)
+    font-size: 1.8rem
+    padding: 1.2rem 2rem
   &:hover
     transform: translateY(-.5rem)
     &::after
