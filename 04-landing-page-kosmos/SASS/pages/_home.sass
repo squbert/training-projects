@@ -1,17 +1,28 @@
 .about
   padding-top: 8rem
   margin-bottom: 6rem
+  @include respond(tab-port)
+    margin-bottom: 40rem
+    padding-top: 1rem
+  @include respond(phone)
+    padding: 2rem
+
 .adventure
   margin-bottom: 6.1rem
   padding: 21rem 0
   background: linear-gradient(180deg, rgba(43, 108, 151, 0.7) 0.03%, rgba(87, 52, 52, 0.7) 99.94%), url(../img/adventure.jpg) center / cover no-repeat
   transform: skewY(4deg)
+  @include respond(tab-port)
+    margin-bottom: 2.3rem
+    padding: 6rem 0
   > *
     transform: skewY(-4deg)
 
 .tour
   padding-top: 21rem
   margin-bottom: 4rem
+  @include respond(tab-port)
+    padding-top: 5rem
 
 .reviews
   position: relative

@@ -3,6 +3,8 @@
   height: 50rem
   perspective: 150rem
   -moz-perspective: 150rem
+  @include respond(tab-port)
+    height: auto
 
   &__side
     position: absolute
@@ -16,24 +18,42 @@
     color: #eee
     box-shadow: $box-shadow
     backface-visibility: hidden
+    @include respond(tab-port)
+      position: relative
+      height: auto
+      
 
     &_front
       background: #eee
+      @include respond(tab-port)
+        padding-bottom: 5rem
+        height: 70rem
 
     &_back
       background: linear-gradient(180deg, $color-blue-dark, $color-blue-light)
       transform: rotateY(180deg)
+      @include respond(tab-port)
+        margin-top: -7.7rem
+        transform: none
+        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
 
   &:hover &__side_front
     transform: rotateY(-180deg)
+    @include respond(tab-port)
+      transform: none
 
   &:hover &__side_back
     transform: rotateY(0deg)
+    @include respond(tab-port)
+      transform: none
 
   &__img
     margin-bottom: 6rem
     height: 21rem
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%)
+    @include respond(tab-port)
+      margin-bottom: 6.5rem
+      height: 30rem
 
     &_first
       background: url(../img/tour-page3.jpg) center / cover no-repeat
@@ -51,6 +71,8 @@
     font-weight: 300
     text-transform: uppercase
     text-align: right
+    @include respond(tab-port)
+      top: 25rem
 
   &__description
     ul
@@ -66,6 +88,10 @@
         color: $color-gray
         &:not(:last-child)
           margin-bottom: 2rem
+        @include respond(tab-land)
+          font-size: 1.1rem
+        @include respond(tab-port)
+          font-size: 2.4rem
 
   &__span
     padding: 1rem 2rem
@@ -82,6 +108,14 @@
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+    @include respond(tab-port)
+      position: relative
+      top: 0
+      left: 0
+      padding: 5rem
+      margin-top: 4rem
+      text-align: center
+      transform: none
 
   &__price-description
     margin-bottom: 8rem
@@ -90,6 +124,9 @@
     text-transform: uppercase
     font-weight: 300
     text-align: center
+    @include respond(tab-port)
+      margin-bottom: 3rem
+      font-size: 3rem
 
   &__price
     margin-bottom: 8rem
@@ -98,3 +135,5 @@
     text-transform: uppercase
     font-weight: 500
     text-align: center
+    @include respond(tab-port)
+      margin-bottom: 3rem

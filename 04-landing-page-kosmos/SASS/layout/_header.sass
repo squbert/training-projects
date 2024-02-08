@@ -3,6 +3,10 @@
   height: 95vh
   background: linear-gradient(180deg, rgba(43, 108, 151, 0.7) 0.03%, rgba(87, 52, 52, 0.7) 99.94%), url(../img/page-1.jpg) center / cover no-repeat
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%)
+  @include respond(tab-port)
+    height: 65vh
+  @include respond(phone)
+    height: 40vh
 
   &__logo
     position: absolute

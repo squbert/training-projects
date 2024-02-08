@@ -2,12 +2,16 @@
   padding: 8rem
   height: 45rem
   background: #353535
+  @include respond(tab-port)
+    padding: 2rem 2rem
 
   &__logo
     display: block
     margin: 0 auto
     padding-bottom: 5rem
     width: 12rem
+    @include respond(tab-port)
+      padding-bottom: 2.3rem
 
   &__list
     text-align: center
@@ -16,8 +20,15 @@
   &__item
       display: inline-block
       cursor: pointer
+      @include respond(tab-port)
+        display: block
       &:not(:last-child)
-        margin-right: 5rem
+        margin-right: 3rem
+        @include respond(tab-land)
+          margin-right: 2rem
+        @include respond(tab-port)
+          margin-right: 0
+          margin-bottom: 2.3rem
 
   &__link
     &:link, &:visited
@@ -26,6 +37,10 @@
       font-weight: 300
       color: $color-white
       transition: all .3s
+      @include respond(tab-land)
+        font-size: 1.5rem
+      @include respond(tab-port)
+        font-size: 2.3rem
     &:hover
         color: $color-blue-light
         transform: skewY(5deg) scale(1.2)
