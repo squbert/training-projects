@@ -3,30 +3,42 @@
   box-shadow: $box-shadow
   border-radius: .5rem
   background: linear-gradient(110deg, rgba(250, 250, 250, 1) 0%, rgba(230, 230, 230, 1) 55%, rgba(94,145,246,.8) 60%, rgba(6,12,123,.5) 100%), url(../img/form.jpg)  right/60% 100% no-repeat
+  @include respond(tab-port)
+    height: 66rem
+    background: linear-gradient(110deg, rgba(250, 250, 250, 1) 0%, rgba(230, 230, 230, .6) 100%), url(../img/form.jpg)  center/cover no-repeat
 
 .form
   width: 70%
   padding-top: 5rem
   padding-left: 5rem
+  @include respond(tab-port)
+    padding: 5rem 3rem
+    width: 100%
 
   &__wrapper:not(:last-child)
     margin-bottom: 2rem
     @include respond(tab-land)
       margin-bottom: 1rem
+    @include respond(tab-port)
+      margin-bottom: 3rem
 
   &__wrapper:nth-child(4)
     margin-bottom: 4rem
     @include respond(tab-land)
       margin-bottom: 2rem
+    @include respond(tab-port)
+      margin-bottom: 4rem
     
   &__title
     text-align: left
+    @include respond(tab-port)
+      text-align: center
     &:hover
       transform: none
       text-shadow: none
 
   &__input
-    padding: 2rem 0rem 2rem 2rem
+    padding: 2rem
     width: 75%
     font-size: 1.6rem
     letter-spacing: .2rem
@@ -38,7 +50,10 @@
     background: $color-white
     box-shadow: $box-shadow
     @include respond(tab-land)
-    width: 70%
+      width: 70%
+    @include respond(tab-port)
+      width: 100%
+      font-size: 2.3rem
     &:focus
       border-bottom: .5rem solid #66D763
       outline: none
@@ -53,6 +68,8 @@
     font-weight: 400
     color: $color-gray
     transition: all .8s
+    @include respond(tab-port)
+      font-size: 2rem
 
   &__input:placeholder-shown + &__label
     opacity: 0
@@ -61,11 +78,15 @@
 
   &__wrapper-radio
     display: inline-block
-    &:not(:last-child)
-      margin-right: 2rem
     @include respond(tab-land)
       display: block
       margin-bottom: 1.7rem
+    @include respond(tab-port)
+      display: inline-block
+    &:not(:last-child)
+      margin-right: 2rem
+      @include respond(tab-port)
+        margin-right: 10rem
       
 
   &__input-radio
@@ -74,11 +95,12 @@
   &__input-radio:checked ~ &__label-radio &__button-radio::after
     opacity: 1
     
-
   &__label-radio
     position: relative
     padding-left: 3.5rem
     cursor: pointer
+    @include respond(tab-port)
+      font-size: 2rem
 
   &__button-radio
     display: block
@@ -89,6 +111,8 @@
     width: 3rem
     border-radius: 50%
     border: .5rem solid $color-blue-light
+    @include respond(tab-port)
+      top: -.2rem
     &::after
       content: ''
       display: block
@@ -106,5 +130,9 @@
   &__button
     color: $color-white
     background: $color-blue-light
+    @include respond(tab-port)
+      display: block
+      margin: 0 auto
+      padding: 2rem 5rem
     &::after
       background: $color-blue-light

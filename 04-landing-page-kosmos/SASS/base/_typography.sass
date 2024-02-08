@@ -17,6 +17,10 @@
     backface-visibility: hidden
     @include respond(tab-land)
       font-size: 4rem
+    @include respond(tab-port)
+      margin-bottom: 0
+      font-size: 3.6rem
+      letter-spacing: 0.5rem
       
 
   &__secondary
@@ -34,6 +38,11 @@
     backface-visibility: hidden
     @include respond(tab-land)
       font-size: 3rem
+    @include respond(tab-port)
+      margin-bottom: 3rem
+      font-size: 2.6rem
+      letter-spacing: 0.2rem
+
 
 .title-secondary
   font-size: 3.6rem
@@ -46,13 +55,16 @@
   color: transparent
   transition: all .4s
   backface-visibility: hidden
+  @include respond(tab-land)
+      font-size: 3rem
+  @include respond(tab-port)
+    font-size: 3.5rem
+    letter-spacing: 0.5rem
   &:hover
     transform: skewY(2deg) skewX(10deg) scale(1.1)
     text-shadow: $title-shadow
   &_white
     color: $color-white
-  @include respond(tab-land)
-      font-size: 3rem
 
 .title-third
   font-size: 2rem

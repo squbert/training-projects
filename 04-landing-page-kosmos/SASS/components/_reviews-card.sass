@@ -6,6 +6,9 @@
   background: rgba($color-white, .75)
   box-shadow: $box-shadow
   transform: skewX(-12deg)
+  @include respond(tab-port)
+    text-align: center
+    padding: 2rem
   & > *
     transform: skewX(12deg)
 
@@ -20,6 +23,10 @@
     overflow: hidden
     shape-outside: circle(50% at 50% 50%)
     -webkit-shape-outside: circle(50% at 50% 50%)
+    @include respond(tab-port)
+      margin: 0 auto
+      margin-bottom: 2rem
+      float: none
 
   &__image
     height: 100%
