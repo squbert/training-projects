@@ -3,9 +3,11 @@
   @@include('html/layout/_head.html',{ "title":"Game Store" })
 
   <body>
-    @@include('html/layout/_header.html',{})
-    <main>hello</main>
-    @@include('html/layout/_footer.html',{})
+    <div class="container">
+      @@include('html/layout/_sidebar.html', {}) @@include('html/layout/_header.html',{}) @@include('html/sections/_gamers.html', {}) @@include('html/sections/_feature.html', {})
+      @@include('html/sections/_banner-img.html', {}) @@include('html/sections/_banner-text.html', {}) @@include('html/sections/_cards.html', {}) @@include('html/sections/_gallery.html', {})
+      @@include('html/layout/_footer.html',{})
+    </div>
     <script src="js/app.min.js"></script>
   </body>
 </html>

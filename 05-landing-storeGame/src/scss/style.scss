@@ -12,6 +12,11 @@
 // Layout
 @import "layout/header";
 @import "layout/footer";
+@import "layout/sidebar";
 
 // Sections
-// @import "sections/";
+@import "sections/banner";
+@import "sections/cards";
+@import "sections/feature";
+@import "sections/gallery";
+@import "sections/gamers";
