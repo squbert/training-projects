@@ -1,4 +1,53 @@
 .header {
+  display: grid;
+  padding: 5rem 4.6rem 5rem 6.3rem;
+  grid-template-rows: 1fr min-content minmax(10rem min-content) 1fr;
   grid-column: full-start/col-end 6;
-  background: $color-blue-dark
+  background: $color-blue-dark;
+  background-image: url(../img/header-bg.png);
+  background-position: center;
+  background-size: cover;
+
+  &__light-title {
+    align-self: end;
+  }
+
+  &__line-text {
+    display: grid;
+    margin-bottom: 1.3rem;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 2rem;
+    align-items: center;
+    font-weight: 700;
+    color: $color-gray;
+
+    &::before, &::after {
+      display: block;
+      content: '';
+      height: .1rem;
+      color: $color-gray;
+    }
+  }
+
+  &__img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    grid-column-gap: 2rem;
+  }
+
+  &__img img {
+    height: 2.5rem;
+    filter: brightness(70%);
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__button {
+    align-self: start;
+    justify-self: start;
+  }
 }

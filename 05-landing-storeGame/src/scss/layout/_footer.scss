@@ -1,4 +1,41 @@
 .footer {
+  padding: 8rem 3rem;
   grid-column: full-start/full-end;
-  background: $color-blue-dark
+  background: $color-blue-dark;
+
+  &__logo {
+    display: block;
+    padding-bottom: 8rem;
+    text-align: center;
+
+    &::hover {
+      transform: translateY(1rem);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    justify-items: center;
+    align-items: center;
+    row-gap: 2rem;
+    list-style: none;
+  }
+
+  &__link {
+    &, &:link, &:visited {
+      font-weight: 300;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-white;
+    }
+
+    &:hover {
+      color: $color-green-light;
+    }
+
+    &:active {
+      color: $color-green-dark;
+    }
+  }
 }

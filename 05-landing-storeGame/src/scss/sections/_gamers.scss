@@ -1,4 +1,38 @@
 .gamers {
+  display: grid;
   grid-column: col-start 7 / full-end;
-  background: $color-blue-dark
+  grid-template-columns: min-content max-content;
+  align-content: center;
+  justify-content: center;
+  grid-gap: 5rem 2rem;
+  background: $color-blue-dark;
+
+  &__title {
+    grid-column: 1 / -1;
+    justify-self: center;
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-green-light;
+  }
+
+  &__avatar {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+  }
+
+  &__text {
+    align-self: center;
+  }
+
+  &__name {
+    font-size: 1.9rem;
+    font-weight: 700;
+  }
+
+  &__score {
+    font-weight: 300;
+    color: $color-gray;
+  }
 }

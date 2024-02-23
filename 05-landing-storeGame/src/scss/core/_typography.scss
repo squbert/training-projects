@@ -1,0 +1,30 @@
+.main-title {
+font-size: 4.5rem;
+font-weight: 700;
+color: $color-white
+}
+
+.subject-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 100%;
+  color: $color-white
+}
+
+.subtitle {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: $color-green-dark;
+  &_white {
+    color: white
+  }
+  &_green-light {
+    color: $color-green-light
+  }
+}
+
+.light-title {
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: $color-green-light;
+}
