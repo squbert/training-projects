@@ -8,6 +8,10 @@
   background-position: center;
   background-size: cover;
 
+  @include respond(tab-port) {
+    grid-column: full-start/full-end;
+  }
+
   &__light-title {
     align-self: end;
   }

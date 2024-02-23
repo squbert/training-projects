@@ -6,6 +6,10 @@
   grid-gap: 3rem 4rem;
   align-items: start;
   background: $color-white;
+
+  @include respond(phone) {
+    padding: 5rem 0;
+  }
 }
 
 .feature {

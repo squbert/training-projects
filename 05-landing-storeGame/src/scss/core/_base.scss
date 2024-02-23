@@ -10,4 +10,13 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+
+  @include respond(tab-land) {
+    grid-template-rows: 5rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+  }
+
+  @include respond(tab-port) {
+    grid-template-rows: 5rem calc(80vh - 6rem) min-content min-content 40vw repeat(3, min-content);
+  }
 }

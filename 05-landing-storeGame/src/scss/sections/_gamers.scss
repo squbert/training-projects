@@ -1,11 +1,30 @@
 .gamers {
   display: grid;
   grid-column: col-start 7 / full-end;
-  grid-template-columns: min-content max-content;
+  grid-template-columns: max-content;
   align-content: center;
   justify-content: center;
-  grid-gap: 5rem 2rem;
+  grid-row-gap: 5rem;
   background: $color-blue-dark;
+
+  @include respond(tab-port) {
+    padding: 3rem;
+    grid-column: full-start/full-end;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem 5rem;
+    justify-items: center;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: min-content;
+    justify-items: start;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-column-gap: 2rem;
+  }
 
   &__title {
     grid-column: 1 / -1;
